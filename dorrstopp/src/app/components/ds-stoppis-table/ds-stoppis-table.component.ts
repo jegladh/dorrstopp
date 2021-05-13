@@ -26,16 +26,13 @@ export class DsStoppisTableComponent implements OnInit {
 
   clickRow(row: Stoppis){
     console.log(row)
-    const dialogRef = this.dialog.open(DsStoppisDialogComponent, {
+    this.dialog.open(DsStoppisDialogComponent, {
       data: {
         name: row.name, 
         id: row.id,
         nick: row.nick,
       }
       });
-        dialogRef.afterOpened().subscribe(result => {
-    console.log(`Dialog result: ${result}`);
-  });
   }
 
 

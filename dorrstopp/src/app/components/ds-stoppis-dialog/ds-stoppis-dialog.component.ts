@@ -10,11 +10,8 @@ import { Stoppis } from '../interface/stoppis';
 })
 export class DsStoppisDialogComponent implements OnInit {
 
-  constructor(public dialogRef: MatDialogRef<DsStoppisTableComponent> , @Inject(MAT_DIALOG_DATA) public data: Stoppis) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: Stoppis) {}
 
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
 
   ngOnInit(): void {
   }
