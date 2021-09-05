@@ -1,6 +1,7 @@
-import { Component,OnInit } from '@angular/core';
+import { Component,OnInit, SystemJsNgModuleLoader } from '@angular/core';
 import { MatDialog} from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
+import { RouterLinkWithHref } from '@angular/router';
 import { DsStoppisDialogComponent } from '../ds-stoppis-dialog/ds-stoppis-dialog.component';
 import { Stoppis } from '../interface/stoppis';
 import { STOPPISAR } from '../mock-stoppis';
@@ -12,7 +13,7 @@ import { STOPPISAR } from '../mock-stoppis';
   styleUrls: ['./ds-stoppis-table.component.css']
 })
 export class DsStoppisTableComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'nick', 'name',];
+  displayedColumns: string[] = [ 'examen','id', 'nick', 'name'];
   dataSource = new MatTableDataSource(STOPPISAR);
 
   constructor(public dialog: MatDialog) { }
@@ -28,12 +29,19 @@ export class DsStoppisTableComponent implements OnInit {
     console.log(row)
     this.dialog.open(DsStoppisDialogComponent, {
       data: {
+        examen: row.examen,
         name: row.name, 
         id: row.id,
         nick: row.nick,
       }
       });
   }
+  tagitExamen(row: Stoppis){
+    if (row.examen){
+      
+    }
+  }
+
 
 
 }

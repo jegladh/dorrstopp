@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DsStoppisListComponent } from './ds-stoppis-table.component';
+import { DsStoppisTableComponent } from './ds-stoppis-table.component';
 
 describe('DsStoppisListComponent', () => {
-  let component: DsStoppisListComponent;
-  let fixture: ComponentFixture<DsStoppisListComponent>;
+  let component: DsStoppisTableComponent;
+  let fixture: ComponentFixture<DsStoppisTableComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DsStoppisListComponent ]
+      declarations: [ DsStoppisTableComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DsStoppisListComponent);
+    fixture = TestBed.createComponent(DsStoppisTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
