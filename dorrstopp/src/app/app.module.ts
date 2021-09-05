@@ -13,7 +13,8 @@ import {  DsStoppisTableComponent} from './components/ds-stoppis-table/ds-stoppi
 import {MatFormFieldModule,} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
-import { DsStoppisDialogComponent } from './components/ds-stoppis-dialog/ds-stoppis-dialog.component'; 
+import { DsStoppisDialogComponent } from './components/ds-stoppis-dialog/ds-stoppis-dialog.component';
+import { DsKontaktComponent } from './components/ds-kontakt/ds-kontakt.component'; 
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { DsStoppisDialogComponent } from './components/ds-stoppis-dialog/ds-stop
     DsNavbarComponent,
     DsStoppisTableComponent,
     DsStoppisDialogComponent,
+    DsKontaktComponent,
   ],
   imports: [
     BrowserModule,

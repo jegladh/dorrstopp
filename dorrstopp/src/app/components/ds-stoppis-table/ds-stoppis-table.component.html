@@ -6,7 +6,14 @@
 <table mat-table [dataSource] = "dataSource" class="mat-elevation-z8">
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
-  
+<!-- TODO lägg till funkiton gö -->
+    <ng-container matColumnDef="examen" >
+      <th mat-header-cell *matHeaderCellDef> Examen </th>
+      <mat-cell *matCellDef="let element" >
+        <td *ngIf="element.examen"><span class="material-icons">star</span> </td>
+        <td *ngIf="!element.examen"><span class="material-icons">star_outline</span> </td>
+      </mat-cell>
+    </ng-container>
     <!-- Position Column -->
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> # </th>

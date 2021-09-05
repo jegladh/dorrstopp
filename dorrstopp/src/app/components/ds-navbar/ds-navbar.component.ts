@@ -1,9 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-ds-navbar',
   templateUrl: './ds-navbar.component.html',
-  styleUrls: ['./ds-navbar.component.css']
+  styleUrls: ['./ds-navbar.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class DsNavbarComponent implements OnInit {
 
