@@ -2,3 +2,17 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-form-field {
+    font-size: 14px;
+    width: 50%;
+    margin-left: 25%;
+    padding-top: 1%;
+  }
+
+
+  table {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }

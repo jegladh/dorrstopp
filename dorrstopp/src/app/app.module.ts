@@ -4,17 +4,37 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DsFrontpageComponent } from './components/ds-frontpage/ds-frontpage.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatTabsModule} from '@angular/material/tabs';
+import { MatTableModule} from '@angular/material/table';
+import { DsNavbarComponent } from './components/ds-navbar/ds-navbar.component';
+import {  DsStoppisTableComponent} from './components/ds-stoppis-table/ds-stoppis-table.component';
+import {MatFormFieldModule,} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
+import { DsStoppisDialogComponent } from './components/ds-stoppis-dialog/ds-stoppis-dialog.component'; 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DsFrontpageComponent,
+    DsNavbarComponent,
+    DsStoppisTableComponent,
+    DsStoppisDialogComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgbModule,
+    MatTabsModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [DsFrontpageComponent]
 })
 export class AppModule { }
