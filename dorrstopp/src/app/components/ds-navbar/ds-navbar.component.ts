@@ -6,10 +6,8 @@ import { Component, ViewEncapsulation, Input, OnInit } from '@angular/core';
   styleUrls: ['./ds-navbar.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class DsNavbarComponent implements OnInit {
+export class DsNavbarComponent {
 
-  @Input() test: any
-  
   topics: Array<any> = [
     {topic: "föreningen", navItem: "1"},
     {topic: "stoppisar", navItem: "2"},
@@ -19,6 +17,4 @@ export class DsNavbarComponent implements OnInit {
   ]
   constructor() { }
 
-  ngOnInit(): void {
-  }
 }

@@ -8,12 +8,8 @@ import { Stoppis } from '../interface/stoppis';
   templateUrl: './ds-stoppis-dialog.component.html',
   styleUrls: ['./ds-stoppis-dialog.component.css']
 })
-export class DsStoppisDialogComponent implements OnInit {
+export class DsStoppisDialogComponent  {
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: Stoppis) {}
-
-
-  ngOnInit(): void {
-  }
 
 }

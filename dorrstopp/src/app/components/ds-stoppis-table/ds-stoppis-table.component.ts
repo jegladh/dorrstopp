@@ -1,5 +1,6 @@
-import { Component,OnInit, SystemJsNgModuleLoader } from '@angular/core';
+import { AfterViewInit, Component,OnInit, SystemJsNgModuleLoader, ViewChild } from '@angular/core';
 import { MatDialog} from '@angular/material/dialog';
+import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { RouterLinkWithHref } from '@angular/router';
 import { DsStoppisDialogComponent } from '../ds-stoppis-dialog/ds-stoppis-dialog.component';
@@ -12,14 +13,17 @@ import { STOPPISAR } from '../mock-stoppis';
   templateUrl: './ds-stoppis-table.component.html',
   styleUrls: ['./ds-stoppis-table.component.css']
 })
-export class DsStoppisTableComponent implements OnInit {
+export class DsStoppisTableComponent implements AfterViewInit {
   displayedColumns: string[] = [ 'examen','id', 'nick', 'name'];
   dataSource = new MatTableDataSource(STOPPISAR);
+  @ViewChild(MatSort) sort!: MatSort; // not null operator neede angular runs in strict mode
 
   constructor(public dialog: MatDialog) { }
-
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    console.log(this.sort)
+    this.dataSource.sort = this.sort;
   }
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
