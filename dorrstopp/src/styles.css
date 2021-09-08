@@ -8,13 +8,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
     width: 50%;
     margin-left: 25%;
     padding-top: 1%;
+    background-color: #202051;
   }
-
-
-  table {
+  .mat-table {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    background-color: white;
   }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

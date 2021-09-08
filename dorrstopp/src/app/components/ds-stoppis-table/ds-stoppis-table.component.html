@@ -3,12 +3,12 @@
   <input matInput (keyup)="applyFilter($event)" placeholder="Ex. #" #input>
 </mat-form-field>
 
-<table mat-table [dataSource] = "dataSource" class="mat-elevation-z8">
+<table mat-table [dataSource] = "dataSource" matSort class="mat-elevation-z8">
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 <!-- TODO lägg till funkiton gö -->
     <ng-container matColumnDef="examen" >
-      <th mat-header-cell *matHeaderCellDef> Examen </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Examen </th>
       <mat-cell *matCellDef="let element" >
         <td *ngIf="element.examen"><span class="material-icons">star</span> </td>
         <td *ngIf="!element.examen"><span class="material-icons">star_outline</span> </td>
@@ -16,19 +16,19 @@
     </ng-container>
     <!-- Position Column -->
     <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef> # </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
       <td mat-cell *matCellDef="let element"> #{{element.id}} </td>
     </ng-container>
   
     <!-- Name Column -->
     <ng-container matColumnDef="nick">
-      <th mat-header-cell *matHeaderCellDef> Kepsnamn </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Kepsnamn </th>
       <td mat-cell *matCellDef="let element"> {{element.nick}} </td>
     </ng-container>
   
     <!-- Weight Column -->
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Namn </th>
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Namn </th>
       <td mat-cell *matCellDef="let element"> {{element.name}} </td>
     </ng-container>
 
