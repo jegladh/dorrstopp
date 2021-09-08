@@ -14,10 +14,11 @@ export class DsNavbarComponent {
  */
   links = [
     {tab:'Förening',link:'home'}, 
-    {tab:'stoppisar',link:'stoppis'}, 
-    {tab:'kontakt', link:'kontakt'}
+    {tab:'Stoppisar',link:'stoppis'},
+    // {tab:'Fester', link:'fester'},
+    {tab:'Kontakt', link:'kontakt'},
+    // {tab:'länkar', link:'länkar'},
   ];
   activeLink = this.links[0];
   constructor() { }
-
 }

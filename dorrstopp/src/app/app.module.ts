@@ -14,7 +14,8 @@ import {MatFormFieldModule,} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DsStoppisDialogComponent } from './components/ds-stoppis-dialog/ds-stoppis-dialog.component';
-import { DsKontaktComponent } from './components/ds-kontakt/ds-kontakt.component'; 
+import { DsKontaktComponent } from './components/ds-kontakt/ds-kontakt.component';
+import { DsStoppisDetailComponent } from './components/ds-stoppis-detail/ds-stoppis-detail.component'; 
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { DsKontaktComponent } from './components/ds-kontakt/ds-kontakt.component
     DsStoppisTableComponent,
     DsStoppisDialogComponent,
     DsKontaktComponent,
+    DsStoppisDetailComponent,
   ],
   imports: [
     BrowserModule,
