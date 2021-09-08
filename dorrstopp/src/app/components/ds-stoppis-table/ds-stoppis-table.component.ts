@@ -1,8 +1,8 @@
 import { AfterViewInit, Component,OnInit, SystemJsNgModuleLoader, ViewChild } from '@angular/core';
-import { MatDialog} from '@angular/material/dialog';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { RouterLinkWithHref } from '@angular/router';
+import { Router } from '@angular/router';
+
 import { DsStoppisDialogComponent } from '../ds-stoppis-dialog/ds-stoppis-dialog.component';
 import { Stoppis } from '../interface/stoppis';
 import { STOPPISAR } from '../mock-stoppis';
@@ -18,9 +18,8 @@ export class DsStoppisTableComponent implements AfterViewInit {
   dataSource = new MatTableDataSource(STOPPISAR);
   @ViewChild(MatSort) sort!: MatSort; // not null operator neede angular runs in strict mode
 
-  constructor(public dialog: MatDialog) { }
+  constructor( private router: Router) { }
   ngAfterViewInit(): void {
-    console.log(this.sort)
     this.dataSource.sort = this.sort;
   }
 
@@ -31,14 +30,9 @@ export class DsStoppisTableComponent implements AfterViewInit {
 
   clickRow(row: Stoppis){
     console.log(row)
-    this.dialog.open(DsStoppisDialogComponent, {
-      data: {
-        examen: row.examen,
-        name: row.name, 
-        id: row.id,
-        nick: row.nick,
-      }
-      });
+    // this.router.navigate(['/kil/', row.id])
+    this.router.navigate(['/kil/', row.id])
+
   }
   tagitExamen(row: Stoppis){
     if (row.examen){
