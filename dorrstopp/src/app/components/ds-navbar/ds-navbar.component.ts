@@ -6,7 +6,7 @@ import { Component, ViewEncapsulation, Input, OnInit } from '@angular/core';
   styleUrls: ['./ds-navbar.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class DsNavbarComponent implements OnInit {
+export class DsNavbarComponent {
 
 /**
  * tab: Namnet på taben
@@ -20,6 +20,4 @@ export class DsNavbarComponent implements OnInit {
   activeLink = this.links[0];
   constructor() { }
 
-  ngOnInit(): void {
-  }
 }
