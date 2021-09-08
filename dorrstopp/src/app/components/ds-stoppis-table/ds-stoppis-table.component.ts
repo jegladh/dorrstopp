@@ -6,6 +6,7 @@ import { RouterLinkWithHref } from '@angular/router';
 import { DsStoppisDialogComponent } from '../ds-stoppis-dialog/ds-stoppis-dialog.component';
 import { Stoppis } from '../interface/stoppis';
 import { STOPPISAR } from '../mock-stoppis';
+import { DsStoppisService } from '../service/ds-stoppis-service/ds-stoppis.service';
 
 
 @Component({
@@ -13,14 +14,18 @@ import { STOPPISAR } from '../mock-stoppis';
   templateUrl: './ds-stoppis-table.component.html',
   styleUrls: ['./ds-stoppis-table.component.css']
 })
-export class DsStoppisTableComponent implements AfterViewInit {
+export class DsStoppisTableComponent implements OnInit ,AfterViewInit {
   displayedColumns: string[] = [ 'examen','id', 'nick', 'name'];
-  dataSource = new MatTableDataSource(STOPPISAR);
+  stoppisarFromService: Stoppis[] = [];
+  dataSource: any;
   @ViewChild(MatSort) sort!: MatSort; // not null operator neede angular runs in strict mode
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private stoppisService: DsStoppisService) { }
+
+  ngOnInit(): void {
+    this.getStoppisar()
+  }
   ngAfterViewInit(): void {
-    console.log(this.sort)
     this.dataSource.sort = this.sort;
   }
 
@@ -40,12 +45,22 @@ export class DsStoppisTableComponent implements AfterViewInit {
       }
       });
   }
+
   tagitExamen(row: Stoppis){
     if (row.examen){
-      
     }
   }
-
-
-
+   getStoppisar(): void {
+      this.stoppisService.getStoppisar()
+      .subscribe(stoppis => {
+        this.stoppisarFromService = stoppis
+        this.dataSource = new MatTableDataSource(stoppis);
+      });
+    }
+    test() {
+      this.stoppisService.getKil(104)
+      .subscribe(kil => {
+        console.log(kil)
+      });
+    }
 }

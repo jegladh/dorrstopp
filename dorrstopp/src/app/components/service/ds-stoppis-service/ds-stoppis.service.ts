@@ -11,12 +11,13 @@ export class DsStoppisService {
   constructor() { }
 
   getStoppisar(): Observable<Stoppis[]> {
+    // hämta alla stoppisar http senare
     const stoppisar = of(STOPPISAR);
     return stoppisar;
   }
   getKil(id: number): Observable<Stoppis> {
     // utgår från att stoppis finns felhantering senare
-    const kil = STOPPISAR.find(h => h.id === id)!;
+    const kil = STOPPISAR.find(kil => kil.id === id)!;
     return of(kil);
   }
 }
