@@ -37,6 +37,7 @@ import { DsKontaktComponent } from './components/ds-kontakt/ds-kontakt.component
     MatDialogModule
   ],
   providers: [],
-  bootstrap: [DsFrontpageComponent]
+  // bootstrap: [DsFrontpageComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

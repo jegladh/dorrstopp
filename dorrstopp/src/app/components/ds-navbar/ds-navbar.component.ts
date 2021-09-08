@@ -8,15 +8,16 @@ import { Component, ViewEncapsulation, Input, OnInit } from '@angular/core';
 })
 export class DsNavbarComponent implements OnInit {
 
-  @Input() test: any
-  
-  topics: Array<any> = [
-    {topic: "föreningen", navItem: "1"},
-    {topic: "stoppisar", navItem: "2"},
-    {topic: "fester", navItem: "3"},
-    {topic: "kontakt", navItem: "4"},
-    {topic: "länkar", navItem: "5"},
-  ]
+/**
+ * tab: Namnet på taben
+ * link: Länk till sidan definierat i routing
+ */
+  links = [
+    {tab:'Förening',link:'home'}, 
+    {tab:'stoppisar',link:'stoppis'}, 
+    {tab:'kontakt', link:'kontakt'}
+  ];
+  activeLink = this.links[0];
   constructor() { }
 
   ngOnInit(): void {
