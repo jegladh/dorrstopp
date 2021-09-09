@@ -1,4 +1,4 @@
-<mat-tab-group animationDuration="2ms">
+<!-- <mat-tab-group animationDuration="2ms">
   <mat-tab label= Föreningen>
     <app-ds-foreningen></app-ds-foreningen>
   </mat-tab>
@@ -14,4 +14,12 @@
   <mat-tab label= länkar>
     
   </mat-tab>
-</mat-tab-group>
+</mat-tab-group> -->
+
+<nav mat-tab-nav-bar >
+  <a mat-tab-link *ngFor="let link of links"
+     (click)="activeLink = link"
+     [active]="activeLink == link"
+     routerLink="/{{link.link}}" routerLinkActive="active-link"
+     > {{link.tab}} </a>
+</nav>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatSortModule} from '@angular/material/sort';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,6 +16,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { DsStoppisDialogComponent } from './components/ds-stoppis-dialog/ds-stoppis-dialog.component';
 import { DsKontaktComponent } from './components/ds-kontakt/ds-kontakt.component';
 import { DsForeningenComponent } from './components/ds-foreningen/ds-foreningen.component'; 
+import { DsStoppisDetailComponent } from './components/ds-stoppis-detail/ds-stoppis-detail.component'; 
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { DsForeningenComponent } from './components/ds-foreningen/ds-foreningen.
     DsStoppisDialogComponent,
     DsKontaktComponent,
     DsForeningenComponent,
+    DsStoppisDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,9 +38,11 @@ import { DsForeningenComponent } from './components/ds-foreningen/ds-foreningen.
     MatTableModule,
     MatFormFieldModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSortModule
   ],
   providers: [],
-  bootstrap: [DsFrontpageComponent]
+  // bootstrap: [DsFrontpageComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
