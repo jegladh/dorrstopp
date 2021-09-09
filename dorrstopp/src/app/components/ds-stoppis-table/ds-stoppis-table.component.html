@@ -1,3 +1,4 @@
+
 <mat-form-field>
   <mat-label>Filter</mat-label>
   <input matInput (keyup)="applyFilter($event)" placeholder="Ex. #" #input>
@@ -6,7 +7,6 @@
 <table mat-table [dataSource] = "dataSource" matSort class="mat-elevation-z8">
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
-<!-- TODO lägg till funkiton gö -->
     <ng-container matColumnDef="examen" >
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Examen </th>
       <mat-cell *matCellDef="let element" >
