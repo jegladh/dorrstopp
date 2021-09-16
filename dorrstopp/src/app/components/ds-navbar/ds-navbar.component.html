@@ -1,8 +1,47 @@
 
-<nav mat-tab-nav-bar >
-  <a mat-tab-link *ngFor="let link of links"
-     (click)="activeLink = link"
-     [active]="activeLink == link"
-     routerLink="/{{link.link}}" routerLinkActive="active-link"
-     > {{link.tab}} </a>
+
+  <nav mat-tab-nav-bar >
+    <a mat-tab-link
+      routerLink="/home" 
+      routerLinkActive="active-link"
+      (click)="activeLink = 'home'"
+      [active]="activeLink == 'home'"> 
+      Förening 
+    </a>
+
+    <a 
+      mat-tab-link
+      routerLink="/stoppis" 
+      routerLinkActive="active-link"
+      (click)="activeLink = 'stoppis'"
+      [active]="activeLink == 'stoppis'"> 
+      Stoppisar 
+    </a>
+
+    <a 
+      mat-tab-link
+      routerLink="" 
+      routerLinkActive="active-link"
+      (click)="activeLink = 'fester'"
+      [active]="activeLink == 'fester'"> 
+      Fester 
+    </a>
+
+    <a 
+      mat-tab-link
+      routerLink="/kontakt" 
+      routerLinkActive="active-link"
+      (click)="activeLink = 'kontakt'"
+      [active]="activeLink == 'kontakt'"> 
+      Kontakt 
+    </a>
+
+    <a 
+      mat-tab-link
+      routerLink="" 
+      routerLinkActive="active-link"
+      (click)="activeLink = 'länkar'"
+      [active]="activeLink == 'länkar'"> 
+      Länkar 
+    </a>
 </nav>
