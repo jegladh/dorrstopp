@@ -9,6 +9,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
     margin-left: 25%;
     padding-top: 1%;
     background-color: white;
+    color: black;
   }
   .mat-table {
     width: 50%;
