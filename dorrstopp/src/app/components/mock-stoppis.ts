@@ -1,7 +1,7 @@
 import { Stoppis } from './interface/stoppis';
 
 export const STOPPISAR: Stoppis[] = [
-  {examen:true, id:104, nick: 'ragget', name: 'niklas' },
+  {examen: true, id: 104, nick: 'ragget', name: 'Niklas Brynolf', adress: 'pressorsbägen 31', stad: 'luleå', mobil: '072-50 200 72', mail: 'niklas.brynolf@gmail.com', d6: 'Sexmästare 2012', linje: 'data', misc: 'Den där ordvitsen var inte helt legitim!' },
   {examen:false, id: 1, nick: 'test1', name: 'prov1' },
   {examen:false, id: 2, nick: 'test2', name: 'prov2' },
   {examen:false, id: 3, nick: 'test3', name: 'prov3' },

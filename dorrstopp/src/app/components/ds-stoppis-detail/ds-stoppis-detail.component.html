@@ -1,7 +1,12 @@
-<div> 
-    examen: {{kil.examen}}
-    nummer: {{kil.id}}
-    kepsnamn: {{kil.nick}}
-    namn: {{kil.name}}
-</div>
+<mat-list role="list">
+    <mat-list-item role="listitem">#{{kil.id}}</mat-list-item>
+    <mat-list-item role="listitem">{{kil.name}}</mat-list-item>
+    <mat-list-item role="listitem">{{kil.adress}}</mat-list-item>
+    <mat-list-item role="listitem">{{kil.stad}}</mat-list-item>
+    <mat-list-item role="listitem">Mob: {{kil.mobil}}</mat-list-item>
+    <mat-list-item role="listitem">Epost: {{kil.mail}}</mat-list-item>
+    <mat-list-item role="listitem">Linje: {{kil.linje}}</mat-list-item>
+    <mat-list-item role="listitem">D6: {{kil.d6}}</mat-list-item>
+    <mat-list-item role="listitem">Övrigt: {{kil.misc}}</mat-list-item>
+  </mat-list>
 <button (click)="goBack()">Tillbaka</button>
