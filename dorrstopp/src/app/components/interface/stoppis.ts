@@ -1,6 +1,6 @@
 export interface Stoppis {
-    id: number;
-    nick: string;
-    name: string;
+    nummer: number;
+    kepsnamn: string;
+    namn: string;
     examen: boolean;
 }
