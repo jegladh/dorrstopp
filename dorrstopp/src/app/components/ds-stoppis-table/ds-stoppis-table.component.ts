@@ -22,11 +22,11 @@ export class DsStoppisTableComponent implements OnInit ,AfterViewInit {
   @ViewChild(MatSort) sort!: MatSort; // not null operator neede angular runs in strict mode
 
   ngOnInit(): void {
-    this.stoppisService.getAllaStoppisar().subscribe((result)=>{
+/*     this.stoppisService.getAllaStoppisar().subscribe((result)=>{
       this.dataSource = result;
       console.log(result);
-    })
-    //this.getStoppisar()
+    }) */
+    this.getStoppisar()
   }
   constructor( private router: Router, private stoppisService: DsStoppisService) { }
 
