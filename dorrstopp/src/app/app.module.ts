@@ -17,6 +17,8 @@ import { DsStoppisDialogComponent } from './components/ds-stoppis-dialog/ds-stop
 import { DsKontaktComponent } from './components/ds-kontakt/ds-kontakt.component';
 import { DsStoppisDetailComponent } from './components/ds-stoppis-detail/ds-stoppis-detail.component';
 import {MatListModule} from '@angular/material/list';
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import {MatListModule} from '@angular/material/list';
     MatInputModule,
     MatDialogModule,
     MatSortModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

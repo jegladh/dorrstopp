@@ -3,6 +3,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 
+
 import { DsStoppisDialogComponent } from '../ds-stoppis-dialog/ds-stoppis-dialog.component';
 import { Stoppis } from '../interface/stoppis';
 import { STOPPISAR } from '../mock-stoppis';
@@ -15,13 +16,17 @@ import { DsStoppisService } from '../service/ds-stoppis-service/ds-stoppis.servi
   styleUrls: ['./ds-stoppis-table.component.css']
 })
 export class DsStoppisTableComponent implements OnInit ,AfterViewInit {
-  displayedColumns: string[] = [ 'examen','id', 'nick', 'name'];
+  displayedColumns: string[] = [ 'examen','nummer', 'kepsnamn', 'namn'];
   stoppisarFromService: Stoppis[] = [];
   dataSource: any;
   @ViewChild(MatSort) sort!: MatSort; // not null operator neede angular runs in strict mode
 
   ngOnInit(): void {
-    this.getStoppisar()
+    this.stoppisService.getAllaStoppisar().subscribe((result)=>{
+      this.dataSource = result;
+      console.log(result);
+    })
+    //this.getStoppisar()
   }
   constructor( private router: Router, private stoppisService: DsStoppisService) { }
 
@@ -35,7 +40,7 @@ export class DsStoppisTableComponent implements OnInit ,AfterViewInit {
   }
 
   clickRow(row: Stoppis){
-    this.router.navigate(['/kil/', row.id])
+    this.router.navigate(['/kil/', row.nummer])
 
   }
 

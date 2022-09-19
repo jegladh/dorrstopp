@@ -15,21 +15,21 @@
       </mat-cell>
     </ng-container>
     <!-- Position Column -->
-    <ng-container matColumnDef="id">
+    <ng-container matColumnDef="nummer">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
-      <td mat-cell *matCellDef="let element"> #{{element.id}} </td>
+      <td mat-cell *matCellDef="let element"> #{{element.nummer}} </td>
     </ng-container>
   
     <!-- Name Column -->
-    <ng-container matColumnDef="nick">
+    <ng-container matColumnDef="kepsnamn">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Kepsnamn </th>
-      <td mat-cell *matCellDef="let element"> {{element.nick}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.kepsnamn}} </td>
     </ng-container>
   
     <!-- Weight Column -->
-    <ng-container matColumnDef="name">
+    <ng-container matColumnDef="namn">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Namn </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.namn}} </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
