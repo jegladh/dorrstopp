@@ -4,7 +4,6 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 
 
-import { DsStoppisDialogComponent } from '../ds-stoppis-dialog/ds-stoppis-dialog.component';
 import { Stoppis } from '../interface/stoppis';
 import { STOPPISAR } from '../mock-stoppis';
 import { DsStoppisService } from '../service/ds-stoppis-service/ds-stoppis.service';

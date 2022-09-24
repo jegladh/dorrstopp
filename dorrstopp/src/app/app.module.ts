@@ -13,12 +13,12 @@ import {  DsStoppisTableComponent} from './components/ds-stoppis-table/ds-stoppi
 import {MatFormFieldModule,} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
-import { DsStoppisDialogComponent } from './components/ds-stoppis-dialog/ds-stoppis-dialog.component';
 import { DsKontaktComponent } from './components/ds-kontakt/ds-kontakt.component';
 import { DsStoppisDetailComponent } from './components/ds-stoppis-detail/ds-stoppis-detail.component';
 import {MatListModule} from '@angular/material/list';
 import {HttpClientModule} from '@angular/common/http';
-
+import {MatCardModule} from '@angular/material/card';
+import { InloggDialogComponent } from './components/inlogg-dialog/inlogg-dialog.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +26,9 @@ import {HttpClientModule} from '@angular/common/http';
     DsFrontpageComponent,
     DsNavbarComponent,
     DsStoppisTableComponent,
-    DsStoppisDialogComponent,
     DsKontaktComponent,
-    DsStoppisDetailComponent
+    DsStoppisDetailComponent,
+    InloggDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +42,8 @@ import {HttpClientModule} from '@angular/common/http';
     MatDialogModule,
     MatSortModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule
 
   ],
   providers: [],

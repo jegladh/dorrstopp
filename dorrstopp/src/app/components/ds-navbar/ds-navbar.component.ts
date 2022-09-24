@@ -1,4 +1,6 @@
 import { Component, ViewEncapsulation, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { InloggDialogComponent } from '../inlogg-dialog/inlogg-dialog.component';
 
 
 @Component({
@@ -9,5 +11,9 @@ import { Component, ViewEncapsulation, Input, OnInit } from '@angular/core';
 })
 export class DsNavbarComponent {
 activeLink:string = 'home'; // första markerade componeneten när listan laddas 
-  constructor() { }
+constructor(public dialog: MatDialog) {}
+
+openDialog() {
+  this.dialog.open(InloggDialogComponent);
+}
 }

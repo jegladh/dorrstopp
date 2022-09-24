@@ -6,3 +6,13 @@
     margin-left: auto;
     margin-right: auto;
 }
+.example-card {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .example-header-image {
+    background-image: url('https://www.ludd.ltu.se/~dorrstop/bilder/stoppisar/119/anna119.jpg');
+    background-size: cover;
+  }

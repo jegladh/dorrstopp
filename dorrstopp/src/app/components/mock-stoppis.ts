@@ -2,7 +2,7 @@ import { Stoppis } from './interface/stoppis';
 
 export const STOPPISAR: Stoppis[] = [
   {examen:true, nummer:104, kepsnamn: 'ragget', namn: 'niklas' },
-  {examen:false, nummer: 1, kepsnamn: 'test1', namn: 'prov1' },
+  {examen:false, nummer: 119, kepsnamn: 'Boden', namn: 'Anna Vestin' },
   {examen:false, nummer: 2, kepsnamn: 'test2', namn: 'prov2' },
   {examen:false, nummer: 3, kepsnamn: 'test3', namn: 'prov3' },
   {examen:false, nummer: 4, kepsnamn: 'test4', namn: 'prov4' },

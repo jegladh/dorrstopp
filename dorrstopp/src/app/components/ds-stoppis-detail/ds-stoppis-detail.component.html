@@ -1,8 +1,21 @@
 
-<div> 
-    examen: {{kil.examen}}
-    nummer: {{kil.nummer}}
-    kepsnamn: {{kil.kepsnamn}}
-    namn: {{kil.namn}}
-</div>
-<button (click)="goBack()">Tillbaka</button>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{kil.nummer}}</mat-card-title>
+      <mat-card-subtitle>{{kil.kepsnamn}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="https://www.ludd.ltu.se/~dorrstop/bilder/stoppisar/119/anna119.jpg" >
+    <mat-card-content>
+      <p>YYYY XXXXXX</p>
+      <p>Docentvägen xxx</p>
+      <p>Mob: 	8788888888</p>
+      <p>Linje: Teknisk Fysik XXX</p>
+      <p>D6: Sexmästerist XXXX </p>
+      <p>Övrigt:</p>
+      <p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.</p>
+    </mat-card-content>
+  </mat-card>
+<!-- <button (click)="goBack()">Tillbaka</button> -->
