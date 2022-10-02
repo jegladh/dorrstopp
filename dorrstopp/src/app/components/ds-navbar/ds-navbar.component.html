@@ -1,0 +1,8 @@
+
+<nav mat-tab-nav-bar >
+  <a mat-tab-link *ngFor="let link of links"
+     (click)="activeLink = link"
+     [active]="activeLink == link"
+     routerLink="/{{link.link}}" routerLinkActive="active-link"
+     > {{link.tab}} </a>
+</nav>
