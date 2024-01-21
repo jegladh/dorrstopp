@@ -1,3 +1,56 @@
 .mat-tab-link{
-    color:white;
+    color:rgb(191, 25, 25);
+}
+
+.title {
+    font-size: 24pt;
+
+}
+
+.border-bottom {
+    border-bottom: 1px solid silver;
+}
+
+.nav-bar .mat-mdc-tab-link-container {
+    border-bottom-style: none !important;
+}
+
+a.link {
+    height: 50px;
+    user-select: none;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.nav-bar  {
+    height: 50px;
+    margin-top: 30px;
+}
+
+.link:hover .link-pre:not(:hover) {
+    color: #d00000 !important;
+}
+
+span.link-pre {
+    color: #ff8888;
+    padding-right: 5px;
+    user-select: none;
+    font-weight: normal;
+}
+
+
+
+span.link-pre::before {
+    content: '.: ';
+    color: #ff8888;
+    user-select: none;
+    font-weight: bold;
+}
+
+.mdc-tab-indicator__content--underline {
+    border-style: none !important;
+}
+
+.mdc-tab--active {
+    color: blueviolet !important;
 }

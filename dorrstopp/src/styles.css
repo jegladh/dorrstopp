@@ -1,7 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color:#111144; color: white;}
 
 .mat-form-field {
     font-size: 14px;
@@ -17,5 +15,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
     background-color: white;
   }
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body, a { 
+  margin: 0; 
+  background-color:#111144;
+  font-family: verdana, tahoma;
+  color: silver !important; 
+}
 

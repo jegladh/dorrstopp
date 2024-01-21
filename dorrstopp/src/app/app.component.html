@@ -1,2 +1,5 @@
-<app-ds-navbar></app-ds-navbar>
-<router-outlet></router-outlet>
+<div class="d-flex flex-column justify-content-start w-100 h-100">
+    <app-ds-navbar class="" [activeLink]="activeLink" (activeLinkChange)="activeLink = $event"></app-ds-navbar>
+    <router-outlet class="align-self-center"></router-outlet>
+    <app-ds-navbar class="" [bottom]="true" [activeLink]="activeLink" (activeLinkChange)="activeLink = $event"></app-ds-navbar>
+</div>

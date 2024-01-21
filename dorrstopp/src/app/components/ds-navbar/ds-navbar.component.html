@@ -1,8 +1,27 @@
+<div class="d-flex justify-content-center px-2 nav-bar">
+  <div class="d-flex flex-row"  [ngClass]="{'border-bottom': !bottom && activeLink !== links[0]}">
+    @if(!bottom && activeLink !== links[0]) {
+      <div class="">
+        <span class="title pe-2">{{activeLink.tab}}</span>
+      </div>
+    } 
+    <nav mat-tab-nav-bar fitInkBarToContent [tabPanel]="tabPanel" class="align-items-end">
+      @for (link of links; track link) {
+        <a mat-tab-link
+        class="link p-0 pe-1"
+        [style.height]="'30px'"
+          (click)="onLinkClick(link)"
+          [active]="activeLink == link"
+          routerLink="/{{link.link}}" routerLinkActive="active-link"> <span class="link-pre">.: </span> {{link.tab}} </a>
+      }
+      @if(bottom) {
+        <a mat-tab-link
+        class="link p-0 pe-1"
+        [style.height]="'30px'"
+        > <span class="link-pre">.: </span> 2024-03-01 15:40 </a>
+      } 
+    </nav>
+    <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+  </div>
 
-<nav mat-tab-nav-bar >
-  <a mat-tab-link *ngFor="let link of links"
-     (click)="activeLink = link"
-     [active]="activeLink == link"
-     routerLink="/{{link.link}}" routerLinkActive="active-link"
-     > {{link.tab}} </a>
-</nav>
+</div>
