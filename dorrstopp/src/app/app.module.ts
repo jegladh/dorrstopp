@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DsFrontpageComponent } from './components/ds-frontpage/ds-frontpage.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatTabsModule} from '@angular/material/tabs';
 import { MatTableModule} from '@angular/material/table';
 import { DsNavbarComponent } from './components/ds-navbar/ds-navbar.component';
@@ -33,7 +32,6 @@ import {HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgbModule,
     MatTabsModule,
     MatTableModule,
     MatFormFieldModule,
